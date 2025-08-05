@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Gustavo Nascimento</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Spline+Sans+Mono:wght@700&display=swap" rel="stylesheet">
+
+    <!-- CSS Externo -->
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Container principal que será "pinado" pela GSAP -->
+    <div id="pin-container" class="relative w-full h-screen overflow-hidden">
+        <!-- Container que se moverá horizontalmente -->
+        <div id="scroll-container" class="flex h-full w-[500vw]">
+            
+            <!-- SEÇÃO 1: INICIAL -->
+            <section class="panel w-screen h-screen flex flex-col justify-center items-start text-left p-8 md:p-16 lg:p-24 bg-[var(--light-bg)] dark:bg-[var(--dark-bg)]">
+                <div class="max-w-4xl">
+                    <h1 id="typewriter-container" class="text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tighter text-[var(--dark-text)] dark:text-[var(--light-text)]">
+                        <span id="typewriter-text"></span><span id="typewriter-cursor" class="text-[var(--secondary-yellow)]">|</span>
+                    </h1>
+                </div>
+                <div class="absolute bottom-10 animate-pulse font-mono text-sm text-gray-400 dark:text-[var(--dark-surface)] shiny-text" data-lang="scrollPrompt">
+                    Role para explorar &rarr;
+                </div>
+            </section>
+
+            <!-- SEÇÃO 2: SOBRE MIM -->
+            <section class="panel w-screen h-screen flex justify-center items-center p-8 bg-[var(--light-bg)] dark:bg-[var(--dark-bg)]">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl">
+                    <div id="profile-card-wrapper" class="pc-card-wrapper mx-auto">
+                        <div id="profile-card" class="pc-card">
+                            <div class="pc-inside">
+                                <div class="pc-shine"></div>
+                                <div class="pc-glare"></div>
+                                <div class="pc-content pc-avatar-content">
+                                    <img class="avatar" src="https://placehold.co/600x800/333533/ffee32?text=Sua+Foto" alt="Foto do Desenvolvedor" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <h2 class="text-5xl font-black text-[var(--secondary-yellow)] mb-6 shiny-text" data-lang="aboutTitle">Sobre Mim</h2>
+                        <p class="text-lg text-[var(--dark-text)] dark:text-[var(--light-text)] mb-4" data-lang="aboutP1">
+                            Olá! Sou um desenvolvedor Fullstack apaixonado por criar soluções digitais que sejam tanto funcionais quanto visualmente atraentes. Minha jornada na programação começou com a curiosidade de entender como as coisas funcionavam por baixo dos panos, e hoje essa curiosidade me move a aprender e aplicar novas tecnologias constantemente.
+                        </p>
+                        <p class="text-lg text-[var(--dark-text)] dark:text-[var(--light-text)]" data-lang="aboutP2">
+                            Trabalho com o ciclo completo de desenvolvimento, desde o design da interface no front-end até a arquitetura do servidor e banco de dados no back-end. Acredito que a melhor solução é aquela que resolve o problema do usuário de forma simples e eficaz.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 3: PROJETOS -->
+            <section class="panel w-screen h-screen flex flex-col justify-center items-center p-8 bg-[var(--light-surface)] dark:bg-[var(--dark-surface)]">
+                <h2 class="text-5xl font-black text-[var(--secondary-yellow)] mb-12 shiny-text" data-lang="projectsTitle">Projetos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Projeto 1 -->
+                    <div class="project-card w-80 h-96 rounded-2xl cursor-pointer" 
+                         data-title-pt="E-commerce Moderno" data-title-en="Modern E-commerce"
+                         data-desc-pt="Plataforma de vendas completa com React, Node.js e Stripe." 
+                         data-desc-full-pt="Este projeto é uma plataforma de e-commerce completa, construída com as tecnologias mais modernas do mercado. O front-end reativo foi desenvolvido com React e TypeScript, garantindo uma experiência de usuário fluida e segura. O back-end, rodando em Node.js com Express, gerencia produtos, usuários e pedidos, com integração de pagamentos via API da Stripe."
+                         data-desc-full-en="This project is a complete e-commerce platform, built with the most modern technologies on the market. The reactive front-end was developed with React and TypeScript, ensuring a fluid and secure user experience. The back-end, running on Node.js with Express, manages products, users, and orders, with payment integration via the Stripe API."
+                         data-stack="React,Node.js,PostgreSQL,Stripe,TailwindCSS,Prisma"
+                         data-image="https://placehold.co/800x600/d6d6d6/202020?text=Projeto+1">
+                        <div class="bg-[var(--light-bg)] dark:bg-[var(--dark-bg)] rounded-2xl p-6 flex flex-col justify-between relative h-full">
+                            <div class="absolute bottom-4 right-4 bg-black/40 dark:bg-white/40 backdrop-blur-sm rounded-full p-1 transition-transform hover:scale-110">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-white dark:text-[var(--dark-bg)]"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+                            </div>
+                            <img src="https://placehold.co/400x250/d6d6d6/202020?text=Projeto+1" class="rounded-lg">
+                            <h3 class="text-2xl font-bold text-[var(--primary-yellow)] mt-4" data-lang="project1Title">E-commerce Moderno</h3>
+                            <p class="text-sm text-[var(--dark-text)] dark:text-[var(--light-text)]" data-lang="project1Desc">Plataforma de vendas completa com React, Node.js e Stripe.</p>
+                        </div>
+                    </div>
+                    <!-- Projeto 2 -->
+                    <div class="project-card w-80 h-96 rounded-2xl cursor-pointer" 
+                         data-title-pt="Clone do Termo" data-title-en="Wordle Clone"
+                         data-desc-pt="Jogo de palavras feito com JavaScript puro e manipulação do DOM."
+                         data-desc-full-pt="Um desafio divertido para recriar o popular jogo de palavras 'Termo' (ou Wordle). Este projeto foi desenvolvido utilizando apenas HTML, CSS e JavaScript puro, com foco na manipulação direta do DOM para criar a interface e a lógica do jogo. O dicionário de palavras é carregado dinamicamente de um arquivo JSON, tornando o jogo extensível."
+                         data-desc-full-en="A fun challenge to recreate the popular word game 'Wordle'. This project was developed using only pure HTML, CSS, and JavaScript, focusing on direct DOM manipulation to create the game interface and logic. The word dictionary is dynamically loaded from a JSON file, making the game extensible."
+                         data-stack="HTML5,CSS3,JavaScript,JSON"
+                         data-image="https://placehold.co/800x600/d6d6d6/202020?text=Projeto+2">
+                        <div class="bg-[var(--light-bg)] dark:bg-[var(--dark-bg)] rounded-2xl p-6 flex flex-col justify-between relative h-full">
+                            <div class="absolute bottom-4 right-4 bg-black/40 dark:bg-white/40 backdrop-blur-sm rounded-full p-1 transition-transform hover:scale-110">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-white dark:text-[var(--dark-bg)]"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+                            </div>
+                            <img src="https://placehold.co/400x250/d6d6d6/202020?text=Projeto+2" class="rounded-lg">
+                            <h3 class="text-2xl font-bold text-[var(--primary-yellow)] mt-4" data-lang="project2Title">Clone do Termo</h3>
+                            <p class="text-sm text-[var(--dark-text)] dark:text-[var(--light-text)]" data-lang="project2Desc">Jogo de palavras feito com JavaScript puro e um dicionário dinâmico.</p>
+                        </div>
+                    </div>
+                    <!-- Projeto 3 -->
+                    <div class="project-card w-80 h-96 rounded-2xl cursor-pointer"
+                         data-title-pt="Dashboard Analítico" data-title-en="Analytics Dashboard"
+                         data-desc-pt="Visualização de dados em tempo real com D3.js e WebSocket."
+                         data-desc-full-pt="Um dashboard para visualização de dados em tempo real. O front-end utiliza a biblioteca D3.js para renderizar gráficos interativos e responsivos, que são atualizados instantaneamente através de uma conexão WebSocket. O back-end simula um fluxo de dados contínuo, ideal para monitoramento de sistemas ou análise de métricas ao vivo."
+                         data-desc-full-en="A dashboard for real-time data visualization. The front-end uses the D3.js library to render interactive and responsive charts, which are updated instantly via a WebSocket connection. The back-end simulates a continuous data stream, ideal for system monitoring or live metrics analysis."
+                         data-stack="D3.js,WebSocket,Node.js,Chart.js"
+                         data-image="https://placehold.co/800x600/d6d6d6/202020?text=Projeto+3">
+                        <div class="bg-[var(--light-bg)] dark:bg-[var(--dark-bg)] rounded-2xl p-6 flex flex-col justify-between relative h-full">
+                            <div class="absolute bottom-4 right-4 bg-black/40 dark:bg-white/40 backdrop-blur-sm rounded-full p-1 transition-transform hover:scale-110">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-white dark:text-[var(--dark-bg)]"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+                            </div>
+                            <img src="https://placehold.co/400x250/d6d6d6/202020?text=Projeto+3" class="rounded-lg">
+                            <h3 class="text-2xl font-bold text-[var(--primary-yellow)] mt-4" data-lang="project3Title">Dashboard Analítico</h3>
+                            <p class="text-sm text-[var(--dark-text)] dark:text-[var(--light-text)]" data-lang="project3Desc">Visualização de dados em tempo real com D3.js e WebSocket.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 4: STACK (REFEITA COM CARROSSEL) -->
+            <section class="panel w-screen h-screen flex flex-col justify-center items-center p-8 bg-[var(--light-bg)] dark:bg-[var(--dark-bg)] space-y-16">
+                <h2 class="text-5xl font-black text-[var(--secondary-yellow)] shiny-text" data-lang="stackTitle">Minha Stack</h2>
+                <div class="scroller w-full max-w-6xl overflow-hidden">
+                    <div class="scroller-inner flex gap-12" x-data="{
+                        logos: [
+                            { src: 'https://www.svgrepo.com/show/354259/react.svg', alt: 'React' },
+                            { src: 'https://www.svgrepo.com/show/354478/typescript-icon.svg', alt: 'TypeScript' },
+                            { src: 'https://www.svgrepo.com/show/354119/nodejs-icon.svg', alt: 'Node.js' },
+                            { src: 'https://www.svgrepo.com/show/508130/nestjs.svg', alt: 'NestJS' },
+                            { src: 'https://www.svgrepo.com/show/354111/nextjs-icon.svg', alt: 'Next.js' },
+                            { src: 'https://www.svgrepo.com/show/374118/tailwind.svg', alt: 'Tailwind CSS' },
+                            { src: 'https://www.svgrepo.com/show/373959/postgresql.svg', alt: 'PostgreSQL' },
+                            { src: 'https://www.svgrepo.com/show/373985/prisma.svg', alt: 'Prisma' },
+                            { src: 'https://www.svgrepo.com/show/353691/docker-icon.svg', alt: 'Docker' },
+                            { src: 'https://www.svgrepo.com/show/353798/git-icon.svg', alt: 'Git' },
+                            { src: 'https://www.svgrepo.com/show/373845/mongo.svg', alt: 'MongoDB' },
+                            { src: 'https://www.svgrepo.com/show/373735/figma.svg', alt: 'Figma' }
+                        ]
+                    }">
+                        <!-- Logos Originais -->
+                        <template x-for="logo in logos" :key="logo.alt">
+                            <img :src="logo.src" :alt="logo.alt" class="h-16 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300">
+                        </template>
+                        <!-- Logos Duplicados para o Efeito Infinito -->
+                        <template x-for="logo in logos" :key="logo.alt + '-clone'">
+                            <img :src="logo.src" :alt="logo.alt" class="h-16 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300">
+                        </template>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 5: CONTATO -->
+            <section class="panel w-screen h-screen flex flex-col justify-center items-center text-center p-8 bg-[var(--light-surface)] dark:bg-[var(--dark-surface)]">
+                <h2 class="text-6xl font-black text-[var(--secondary-yellow)] mb-6 shiny-text" data-lang="contactTitle">Vamos Conversar?</h2>
+                <p class="text-xl text-[var(--dark-text)] dark:text-[var(--light-text)] max-w-2xl mb-8" data-lang="contactP1">
+                    Estou sempre aberto a novas oportunidades e colaborações. Se você tem um projeto em mente ou apenas quer trocar uma ideia, não hesite em me contatar.
+                </p>
+                <div class="flex space-x-8">
+                    <a href="mailto:seu.email@exemplo.com" class="text-[var(--primary-yellow)] hover:text-[var(--secondary-yellow)] transition-colors duration-300 font-mono text-lg">seu.email@exemplo.com</a>
+                    <a href="#" class="text-[var(--primary-yellow)] hover:text-[var(--secondary-yellow)] transition-colors duration-300 font-mono text-lg">LinkedIn</a>
+                    <a href="#" class="text-[var(--primary-yellow)] hover:text-[var(--secondary-yellow)] transition-colors duration-300 font-mono text-lg">GitHub</a>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    
+    <!-- NAVBAR FIXA -->
+    <nav id="bottom-nav" class="fixed bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4 px-4 py-3 bg-white/20 dark:bg-[var(--dark-bg)]/20 backdrop-blur-lg rounded-full border border-white/10 dark:border-[var(--light-text)]/10 shadow-lg z-50">
+        <!-- Links de Navegação -->
+        <div id="nav-links" class="flex items-center gap-2">
+            <button class="nav-link p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors" data-target="0" title="Início"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-[var(--dark-text)] dark:text-[var(--light-text)]"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h7.5" /></svg></button>
+            <button class="nav-link p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors" data-target="1" title="Sobre Mim"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-[var(--dark-text)] dark:text-[var(--light-text)]"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" /></svg></button>
+            <button class="nav-link p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors" data-target="2" title="Projetos"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-[var(--dark-text)] dark:text-[var(--light-text)]"><path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" /></svg></button>
+            <button class="nav-link p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors" data-target="3" title="Stack"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-[var(--dark-text)] dark:text-[var(--light-text)]"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5-3.75a8.25 8.25 0 0 0-16.5 0" /></svg></button>
+            <button class="nav-link p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors" data-target="4" title="Contacto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-[var(--dark-text)] dark:text-[var(--light-text)]"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg></button>
+        </div>
+        <!-- Divisor -->
+        <div class="w-px h-6 bg-black/10 dark:bg-[var(--light-text)]/20"></div>
+        <!-- Controlos -->
+        <div class="flex items-center gap-2">
+            <div class="flex gap-2 text-sm font-bold">
+                <button id="lang-pt" class="px-2 py-1 rounded-full text-[var(--dark-text)] bg-[var(--primary-yellow)] transition-colors">PT</button>
+                <button id="lang-en" class="px-2 py-1 rounded-full text-gray-500 dark:text-gray-400 hover:text-[var(--dark-text)] dark:hover:text-white transition-colors">EN</button>
+            </div>
+            <button id="dark-mode-toggle" class="p-2 rounded-full hover:bg-black/10 dark:hover:bg-[var(--light-text)]/20 transition-colors">
+                <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-[var(--primary-yellow)] hidden"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" /></svg>
+                <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-[var(--dark-surface)]"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" /></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MODAL DE PROJETO (inicialmente escondido) -->
+    <div id="project-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm flex justify-center items-center z-50 hidden p-4">
+        <div id="modal-content" class="bg-[var(--light-surface)] dark:bg-[var(--dark-surface)] text-[var(--dark-text)] dark:text-[var(--light-text)] w-11/12 max-w-4xl max-h-[90vh] rounded-2xl p-8 shadow-2xl relative overflow-y-auto">
+            <button id="modal-close-btn" class="absolute top-4 right-4 p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg></button>
+            <img id="modal-image" src="" alt="Imagem do projeto" class="w-full h-auto max-h-80 object-cover rounded-lg mb-6">
+            <h2 id="modal-title" class="text-4xl font-black text-[var(--secondary-yellow)] mb-4"></h2>
+            <p id="modal-description" class="text-lg mb-6"></p>
+            <h3 class="text-2xl font-bold mb-3" data-lang="stackProjectTitle">Tecnologias Utilizadas</h3>
+            <div id="modal-stack" class="flex flex-wrap gap-2 mb-6">
+                <!-- Tags da stack serão inseridas aqui via JS -->
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="px-6 py-2 bg-[var(--primary-yellow)] text-[var(--dark-bg)] font-bold rounded-lg hover:bg-[var(--secondary-yellow)] transition-colors" data-lang="modalLive">Ver ao Vivo</a>
+                <a href="#" class="px-6 py-2 bg-gray-200 dark:bg-[var(--dark-bg)] text-[var(--dark-text)] dark:text-[var(--light-text)] font-bold rounded-lg hover:bg-gray-300 dark:hover:bg-opacity-80 transition-colors" data-lang="modalCode">Código no GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ordem dos scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
