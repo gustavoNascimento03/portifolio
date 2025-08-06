@@ -45,6 +45,18 @@ html {
     color: var(--primary-yellow);
 }
 
+/* --- ESTILOS DOS ÍCONES DA NAVBAR --- */
+.nav-icon {
+    width: 1.5rem; /* Equivalente a w-6 do Tailwind */
+    height: 1.5rem; /* Equivalente a h-6 do Tailwind */
+    transition: filter 0.3s ease;
+}
+
+/* No modo escuro, inverte a cor dos ícones para branco */
+.dark .nav-icon {
+    filter: invert(1);
+}
+
 /* --- ESTILOS DO CARROSSEL INFINITO --- */
 @keyframes scroll {
     from { transform: translateX(0); }

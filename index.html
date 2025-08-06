@@ -8,6 +8,12 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+
     <!-- Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,7 +76,9 @@
                          data-title-pt="Blog back-end" data-title-en="Back-end blog "
                          data-desc-pt="Back-end do Blog-Fiap, com Node.js, MongoDB, Docker." 
                          data-stack="Node.js,MongoDB,Jest,Docker,PostMan"
-                         data-image="/IMG/FT/Fluxo.png">
+                         data-image="/IMG/FT/Fluxo.png"
+                         data-live-url="https://github.com/gustavoNascimento03/Back-End__Blog-FIAP"
+                         data-github-url="https://github.com/gustavoNascimento03/Back-End__Blog-FIAP">
                         <div class="bg-[var(--light-bg)] dark:bg-[var(--dark-bg)] rounded-2xl p-6 flex flex-col justify-between relative h-full">
                             <div class="absolute bottom-4 right-4 bg-black/40 dark:bg-white/40 backdrop-blur-sm rounded-full p-1 transition-transform hover:scale-110">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-white dark:text-[var(--dark-bg)]"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
@@ -82,29 +90,33 @@
                     </div>
                     <!-- Projeto 2 -->
                     <div class="project-card w-80 h-96 rounded-2xl cursor-pointer" 
-                         data-title-pt="Clone do Termo" data-title-en="Wordle Clone"
+                         data-title-pt="Wordle-PT-BR" data-title-en="Wordle-PT-BR"
                          data-desc-pt="Jogo de palavras feito com JavaScript puro e manipulação do DOM."
                          data-desc-full-pt="Um desafio divertido para recriar o popular jogo de palavras 'Termo' (ou Wordle). Este projeto foi desenvolvido utilizando apenas HTML, CSS e JavaScript puro, com foco na manipulação direta do DOM para criar a interface e a lógica do jogo. O dicionário de palavras é carregado dinamicamente de um arquivo JSON, tornando o jogo extensível."
                          data-desc-full-en="A fun challenge to recreate the popular word game 'Wordle'. This project was developed using only pure HTML, CSS, and JavaScript, focusing on direct DOM manipulation to create the game interface and logic. The word dictionary is dynamically loaded from a JSON file, making the game extensible."
                          data-stack="HTML5,CSS3,JavaScript,JSON"
-                         data-image="https://placehold.co/800x600/d6d6d6/202020?text=Projeto+2">
+                         data-image="/IMG/FT/wordle.png"
+                         data-live-url="https://wordle-pt-br.vercel.app"
+                         data-github-url="https://github.com/gustavoNascimento03/Wordle-PT-BR">
                         <div class="bg-[var(--light-bg)] dark:bg-[var(--dark-bg)] rounded-2xl p-6 flex flex-col justify-between relative h-full">
                             <div class="absolute bottom-4 right-4 bg-black/40 dark:bg-white/40 backdrop-blur-sm rounded-full p-1 transition-transform hover:scale-110">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-white dark:text-[var(--dark-bg)]"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
                             </div>
-                            <img src="https://placehold.co/400x250/d6d6d6/202020?text=Projeto+2" class="rounded-lg">
+                            <img src="/IMG/FT/wordle.png" class="rounded-lg">
                             <h3 class="text-2xl font-bold text-[var(--primary-yellow)] mt-4" data-lang="project2Title">Clone do Termo</h3>
                             <p class="text-sm text-[var(--dark-text)] dark:text-[var(--light-text)]" data-lang="project2Desc">Jogo de palavras feito com JavaScript puro e um dicionário dinâmico.</p>
                         </div>
                     </div>
                     <!-- Projeto 3 -->
-                    <div class="project-card w-80 h-96 rounded-2xl cursor-pointer"
+                    <!-- <div class="project-card w-80 h-96 rounded-2xl cursor-pointer"
                          data-title-pt="Dashboard Analítico" data-title-en="Analytics Dashboard"
                          data-desc-pt="Visualização de dados em tempo real com D3.js e WebSocket."
                          data-desc-full-pt="Um dashboard para visualização de dados em tempo real. O front-end utiliza a biblioteca D3.js para renderizar gráficos interativos e responsivos, que são atualizados instantaneamente através de uma conexão WebSocket. O back-end simula um fluxo de dados contínuo, ideal para monitoramento de sistemas ou análise de métricas ao vivo."
                          data-desc-full-en="A dashboard for real-time data visualization. The front-end uses the D3.js library to render interactive and responsive charts, which are updated instantly via a WebSocket connection. The back-end simulates a continuous data stream, ideal for system monitoring or live metrics analysis."
                          data-stack="D3.js,WebSocket,Node.js,Chart.js"
-                         data-image="https://placehold.co/800x600/d6d6d6/202020?text=Projeto+3">
+                         data-image="https://placehold.co/800x600/d6d6d6/202020?text=Projeto+3"
+                         data-live-url="#"
+                         data-github-url="#">
                         <div class="bg-[var(--light-bg)] dark:bg-[var(--dark-bg)] rounded-2xl p-6 flex flex-col justify-between relative h-full">
                             <div class="absolute bottom-4 right-4 bg-black/40 dark:bg-white/40 backdrop-blur-sm rounded-full p-1 transition-transform hover:scale-110">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-white dark:text-[var(--dark-bg)]"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
@@ -113,7 +125,7 @@
                             <h3 class="text-2xl font-bold text-[var(--primary-yellow)] mt-4" data-lang="project3Title">Dashboard Analítico</h3>
                             <p class="text-sm text-[var(--dark-text)] dark:text-[var(--light-text)]" data-lang="project3Desc">Visualização de dados em tempo real com D3.js e WebSocket.</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </section>
 
@@ -123,18 +135,22 @@
                 <div class="scroller w-full max-w-6xl overflow-hidden">
                     <div class="scroller-inner flex gap-12" x-data="{
                         logos: [
-                            { src: 'https://www.svgrepo.com/show/354259/react.svg', alt: 'React' },
-                            { src: 'https://www.svgrepo.com/show/354478/typescript-icon.svg', alt: 'TypeScript' },
-                            { src: 'https://www.svgrepo.com/show/354119/nodejs-icon.svg', alt: 'Node.js' },
-                            { src: 'https://www.svgrepo.com/show/508130/nestjs.svg', alt: 'NestJS' },
-                            { src: 'https://www.svgrepo.com/show/354111/nextjs-icon.svg', alt: 'Next.js' },
-                            { src: 'https://www.svgrepo.com/show/374118/tailwind.svg', alt: 'Tailwind CSS' },
-                            { src: 'https://www.svgrepo.com/show/373959/postgresql.svg', alt: 'PostgreSQL' },
-                            { src: 'https://www.svgrepo.com/show/373985/prisma.svg', alt: 'Prisma' },
-                            { src: 'https://www.svgrepo.com/show/353691/docker-icon.svg', alt: 'Docker' },
-                            { src: 'https://www.svgrepo.com/show/353798/git-icon.svg', alt: 'Git' },
-                            { src: 'https://www.svgrepo.com/show/373845/mongo.svg', alt: 'MongoDB' },
-                            { src: 'https://www.svgrepo.com/show/373735/figma.svg', alt: 'Figma' }
+                            { src: '/IMG/LOGO/react.svg', alt: 'React' },
+                            { src: '/IMG/LOGO/typescript.svg', alt: 'TypeScript' },
+                            { src: '/IMG/LOGO/node.svg', alt: 'Node.js' },
+                            { src: '/IMG/LOGO/jest.svg', alt: 'Jest' },
+                            { src: '/IMG/LOGO/html.svg', alt: 'HTML5' },
+                            { src: '/IMG/LOGO/tailwind.svg', alt: 'Tailwind CSS' },
+                            { src: '/IMG/LOGO/mongo.svg', alt: 'MongoDB' },
+                            { src: '/IMG/LOGO/illustrator.svg', alt: 'Illustrator' },
+                            { src: '/IMG/LOGO/docker.svg', alt: 'Docker' },
+                            { src: '/IMG/LOGO/github.svg', alt: 'GitHub' },
+                            { src: '/IMG/LOGO/notion.svg', alt: 'Notion' },
+                            { src: '/IMG/LOGO/figma.svg', alt: 'Figma' },
+                            { src: '/IMG/LOGO/photoshop.svg', alt: 'Photoshop' },
+                            { src: '/IMG/LOGO/unreal.svg', alt: 'Unreal Engine 5' },
+                            { src: '/IMG/LOGO/vite.svg', alt: 'Vite' },
+                            { src: '/IMG/LOGO/vscode.svg', alt: 'VSCode' }
                         ]
                     }">
                         <!-- Logos Originais -->
@@ -156,9 +172,9 @@
                     Estou sempre aberto a novas oportunidades e colaborações. Se você tem um projeto em mente ou apenas quer trocar uma ideia, não hesite em me contatar.
                 </p>
                 <div class="flex space-x-8">
-                    <a href="mailto:seu.email@exemplo.com" class="text-[var(--primary-yellow)] hover:text-[var(--secondary-yellow)] transition-colors duration-300 font-mono text-lg">seu.email@exemplo.com</a>
-                    <a href="#" class="text-[var(--primary-yellow)] hover:text-[var(--secondary-yellow)] transition-colors duration-300 font-mono text-lg">LinkedIn</a>
-                    <a href="#" class="text-[var(--primary-yellow)] hover:text-[var(--secondary-yellow)] transition-colors duration-300 font-mono text-lg">GitHub</a>
+                    <a href="mailto:gustavo.nascprojetos7@gmail.com" class="text-[var(--primary-yellow)] hover:text-[var(--secondary-yellow)] transition-colors duration-300 font-mono text-lg">gustavo.nascprojetos7@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/gustavo-nascimento-184097359" class="text-[var(--primary-yellow)] hover:text-[var(--secondary-yellow)] transition-colors duration-300 font-mono text-lg">LinkedIn</a>
+                    <a href="https://github.com/gustavoNascimento03" class="text-[var(--primary-yellow)] hover:text-[var(--secondary-yellow)] transition-colors duration-300 font-mono text-lg">GitHub</a>
                 </div>
             </section>
 
@@ -169,11 +185,11 @@
     <nav id="bottom-nav" class="fixed bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4 px-4 py-3 bg-white/20 dark:bg-[var(--dark-bg)]/20 backdrop-blur-lg rounded-full border border-white/10 dark:border-[var(--light-text)]/10 shadow-lg z-50">
         <!-- Links de Navegação -->
         <div id="nav-links" class="flex items-center gap-2">
-            <button class="nav-link p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors" data-target="0" title="Início"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-[var(--dark-text)] dark:text-[var(--light-text)]"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h7.5" /></svg></button>
-            <button class="nav-link p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors" data-target="1" title="Sobre Mim"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-[var(--dark-text)] dark:text-[var(--light-text)]"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" /></svg></button>
-            <button class="nav-link p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors" data-target="2" title="Projetos"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-[var(--dark-text)] dark:text-[var(--light-text)]"><path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" /></svg></button>
-            <button class="nav-link p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors" data-target="3" title="Stack"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-[var(--dark-text)] dark:text-[var(--light-text)]"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5-3.75a8.25 8.25 0 0 0-16.5 0" /></svg></button>
-            <button class="nav-link p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors" data-target="4" title="Contacto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-[var(--dark-text)] dark:text-[var(--light-text)]"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg></button>
+            <button class="nav-link p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors" data-target="0" title="Início"><img class="nav-icon" src="/IMG/NAVBAR/home.svg" alt="Inicio"></button>
+            <button class="nav-link p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors" data-target="1" title="Sobre Mim"><img class="nav-icon" src="/IMG/NAVBAR/profile.svg" alt="Sobre Mim"></button>
+            <button class="nav-link p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors" data-target="2" title="Projetos"><img class="nav-icon" src="/IMG/NAVBAR/code.svg" alt="Projetos"></button>
+            <button class="nav-link p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors" data-target="3" title="Stack"><img class="nav-icon" src="/IMG/NAVBAR/data.svg" alt="Stacks"></button>
+            <button class="nav-link p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors" data-target="4" title="Contacto"><img class="nav-icon" src="/IMG/NAVBAR/mail.svg" alt="Contato"></button>
         </div>
         <!-- Divisor -->
         <div class="w-px h-6 bg-black/10 dark:bg-[var(--light-text)]/20"></div>
@@ -202,8 +218,8 @@
                 <!-- Tags da stack serão inseridas aqui via JS -->
             </div>
             <div class="flex gap-4">
-                <a href="#" class="px-6 py-2 bg-[var(--primary-yellow)] text-[var(--dark-bg)] font-bold rounded-lg hover:bg-[var(--secondary-yellow)] transition-colors" data-lang="modalLive">Ver ao Vivo</a>
-                <a href="#" class="px-6 py-2 bg-gray-200 dark:bg-[var(--dark-bg)] text-[var(--dark-text)] dark:text-[var(--light-text)] font-bold rounded-lg hover:bg-gray-300 dark:hover:bg-opacity-80 transition-colors" data-lang="modalCode">Código no GitHub</a>
+                <a id="modal-live-link" href="#" target="_blank" class="px-6 py-2 bg-[var(--primary-yellow)] text-[var(--dark-bg)] font-bold rounded-lg hover:bg-[var(--secondary-yellow)] transition-colors" data-lang="modalLive">Ver ao Vivo</a>
+                <a id="modal-github-link" href="#" target="_blank" class="px-6 py-2 bg-gray-200 dark:bg-[var(--dark-bg)] text-[var(--dark-text)] dark:text-[var(--light-text)] font-bold rounded-lg hover:bg-gray-300 dark:hover:bg-opacity-80 transition-colors" data-lang="modalCode">Código no GitHub</a>
             </div>
         </div>
     </div>

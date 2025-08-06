@@ -9,7 +9,7 @@ const translations = {
         projectsTitle: "Projetos", 
         project1Title: "Blog Back-end", 
         project1Desc: "Back-end do Blog-Fiap, com Node.js, MongoDB, Docker.", 
-        project2Title: "Clone do Termo", 
+        project2Title: "Wordle", 
         project2Desc: "Jogo de palavras feito com JavaScript puro e um dicionário dinâmico.", 
         project3Title: "Dashboard Analítico", 
         project3Desc: "Visualização de dados em tempo real com D3.js e WebSocket.", 
@@ -29,7 +29,7 @@ const translations = {
         projectsTitle: "Projects", 
         project1Title: "Back-end Blog ", 
         project1Desc: "Back-end of Blog-Fiap, with Node.js, MongoDB, Docker.", 
-        project2Title: "Wordle Clone", 
+        project2Title: "Wordle", 
         project2Desc: "Word game made with pure JavaScript and a dynamic dictionary.", 
         project3Title: "Analytics Dashboard", 
         project3Desc: "Real-time data visualization with D3.js and WebSocket.", 
@@ -89,6 +89,8 @@ const modalImage = document.getElementById('modal-image');
 const modalTitle = document.getElementById('modal-title');
 const modalDescription = document.getElementById('modal-description');
 const modalStackContainer = document.getElementById('modal-stack');
+const modalLiveLink = document.getElementById('modal-live-link');
+const modalGithubLink = document.getElementById('modal-github-link');
 const projectCards = document.querySelectorAll('.project-card');
 
 const openModal = (card) => {
@@ -96,10 +98,14 @@ const openModal = (card) => {
     const desc = card.dataset[`desc-full-${currentLang}`];
     const image = card.dataset.image;
     const stack = card.dataset.stack;
+    const liveUrl = card.dataset.liveUrl;
+    const githubUrl = card.dataset.githubUrl;
     
     modalImage.src = image;
     modalTitle.textContent = title;
     modalDescription.textContent = desc;
+    modalLiveLink.href = liveUrl;
+    modalGithubLink.href = githubUrl;
     
     modalStackContainer.innerHTML = '';
     if (stack) {
@@ -138,7 +144,7 @@ const cursorElement = document.getElementById('typewriter-cursor');
 const typingSpeed = 75;
 const deletingSpeed = 40;
 const pauseDuration = 1500;
-let textColors = []; // Será preenchido quando o DOM carregar
+let textColors = [];
 
 let textArrayIndex = 0;
 let charIndex = 0;
@@ -253,7 +259,6 @@ if (profileCardWrapper) {
 
 // Inicia tudo quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', () => {
-    // Pega as cores das variáveis CSS para usar no JS
     const rootStyles = getComputedStyle(document.documentElement);
     const primaryYellow = rootStyles.getPropertyValue('--primary-yellow').trim();
     const secondaryYellow = rootStyles.getPropertyValue('--secondary-yellow').trim();
