@@ -5,23 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Gustavo Nascimento</title>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <script>
-        tailwind.config = {
-            darkMode: 'class'
-        }
-    </script>
-
     <!-- Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Spline+Sans+Mono:wght@700&display=swap" rel="stylesheet">
-
-    <!-- CSS Externo -->
-    <link href="style.css" rel="stylesheet">
-
 </head>
 <body>
 
@@ -222,15 +209,10 @@
                 <a id="modal-github-link" href="#" target="_blank" class="px-6 py-2 bg-gray-200 dark:bg-[var(--dark-bg)] text-[var(--dark-text)] dark:text-[var(--light-text)] font-bold rounded-lg hover:bg-gray-300 dark:hover:bg-opacity-80 transition-colors" data-lang="modalCode">Código no GitHub</a>
             </div>
         </div>
-    </div>
+    </div>,
 
-    <!-- Ordem dos scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="script.js"></script>
+    <!-- Ponto de entrada do Vite -->
+    <script type="module" src="/src/script.js"></script>
     
 </body>
 </html>
